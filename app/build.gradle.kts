@@ -86,6 +86,10 @@ dependencies{
     implementation(Firebase.core)
     implementation(Firebase.messaging)
     implementation(Firebase.analytics)
+    /**Glide**/
+    implementation(Glide.GLIDE)
+    implementation(Glide.COMPILER)
+    implementation(Glide.GLIDE_OKHTTP3)
     /**Tests**/
     testImplementation(Tests.JUNIT)
     androidTestImplementation(Tests.TEST_EXT_JUNIT)

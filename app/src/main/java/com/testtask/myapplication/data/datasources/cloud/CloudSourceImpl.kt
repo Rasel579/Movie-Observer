@@ -11,4 +11,8 @@ class CloudSourceImpl(
     override  fun getData(): Flow<Response> = flow <Response> {
         emit(service.getMovies())
     }
+
+    override fun getNextData(offset: Int): Flow<Response> = flow<Response> {
+        emit(service.getNextPageMovies(offset = offset))
+    }
 }

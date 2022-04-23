@@ -13,7 +13,11 @@ class RepositoryImpl(
     private val cloudSource: CloudSource,
     private val mapper: MapMovie
 ) : Repository {
-    override  fun getData(): Flow<List<Movie>> = cloudSource.getData().map { response ->
+    override fun getData(): Flow<List<Movie>> = cloudSource.getData().map { response ->
         mapper.map(response)
+    }.flowOn(Dispatchers.IO)
+
+    override fun getNextPage(offset: Int): Flow<List<Movie>> = cloudSource.getNextData(offset).map {
+        mapper.map(it)
     }.flowOn(Dispatchers.IO)
 }
