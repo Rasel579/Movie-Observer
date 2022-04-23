@@ -17,6 +17,13 @@ class MainViewModel(
             }
         }
     }
+    fun getNextPage(page: Int){
+        viewModelCoroutineScope.launch {
+            repository.getNextPage(page).collect {
+                mutableLiveData.postValue(AppState.SuccessNextPage(it))
+            }
+        }
+    }
 
     override fun handleError(throwable: Throwable) {
         mutableLiveData.postValue(AppState.Error(throwable))

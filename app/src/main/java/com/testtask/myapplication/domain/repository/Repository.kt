@@ -5,4 +5,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface Repository {
      fun  getData(): Flow<List<Movie>>
+     fun getNextPage(offset: Int): Flow<List<Movie>>
 }

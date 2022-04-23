@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="@dimen/height_nav_header"
     android:background="@drawable/movie_back_ground_drawer_layout"
     style="@style/ThemeOverlay.AppCompat.Dark"
-    android:gravity="center"
-    >
+    android:gravity="center">
     <TextView
         android:id="@+id/nav_header_profile_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_title_drawer_layout"
+        android:textAlignment="center"
         android:textSize="@dimen/text_size_title_drawer_layout"
         android:textStyle="bold"
         android:shadowDx="1"
@@ -21,6 +21,10 @@
         android:shadowColor="@color/black"
         android:textColor="@color/white"
         android:text="@string/title_drawer_layout"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
     <TextView
         android:id="@+id/nav_header_bio_text"
@@ -28,6 +32,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_subtitle_drawer_layout"
         android:textStyle="bold"
+        android:textAlignment="center"
         android:textColor="@color/white"
         android:shadowColor="@color/black"
         android:shadowDx="-10"
@@ -35,5 +40,8 @@
         android:shadowRadius="30"
         android:text="@string/sub_title_drawer_layout"
         android:textSize="@dimen/text_size_subtitle_drawer_layout"
+        app:layout_constraintTop_toBottomOf="@+id/nav_header_profile_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         />
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

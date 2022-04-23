@@ -7,5 +7,9 @@ import retrofit2.http.Query
 
 interface ServiceApi {
     @GET("/svc/movies/v2/reviews/all.json")
-    suspend fun getMovies(@Query("api-key") apikey: String = BuildConfig.MOVIE_DB_APIKEY): Response
+    suspend fun getMovies(@Query("api-key") apikey: String = BuildConfig.MOVIE_DB_APIKEY, ): Response
+    @GET("/svc/movies/v2/reviews/all.json")
+    suspend fun getNextPageMovies(
+        @Query("api-key") apikey: String = BuildConfig.MOVIE_DB_APIKEY,
+        @Query("offset") offset: Int): Response
 }
