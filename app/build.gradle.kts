@@ -19,13 +19,15 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes.onEach{
-        val properties = Properties()
-        val url = "\"https://api.nytimes.com/svc/movies/v2/\""
-        properties.load(file("..//apikey.properties").inputStream())
-        val apiKey = properties.getProperty("movie_database_apikey", "")
-        it.buildConfigField("String", "MOVIE_DB_APIKEY", apiKey)
-        it.buildConfigField("String", "BASE_API_URL", url)
+    buildTypes{
+        getByName("debug"){
+            val properties = Properties()
+            val url = "\"https://api.nytimes.com/svc/movies/v2/\""
+            properties.load(file("..//apikey.properties").inputStream())
+            val apiKey = properties.getProperty("movie_database_apikey", "")
+            buildConfigField("String", "MOVIE_DB_APIKEY", apiKey)
+            buildConfigField("String", "BASE_API_URL", url)
+        }
     }
 
     buildTypes {
