@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_subtitle_drawer_layout">10dp</dimen>
+    <dimen name="text_size_subtitle_drawer_layout">30sp</dimen>
+    <dimen name="margin_title_drawer_layout">10dp</dimen>
+    <dimen name="text_size_title_drawer_layout">36sp</dimen>
+    <dimen name="height_nav_header">320dp</dimen>
+    <dimen name="poster_image_width">120dp</dimen>
+    <dimen name="poster_image_height">180dp</dimen>
+    <dimen name="image_movie_margin">10dp</dimen>
+    <dimen name="description_movie">5dp</dimen>
+    <dimen name="description_text_size">14sp</dimen>
+    <dimen name="title_of_movie_text_size">18sp</dimen>
+    <dimen name="title_text_size_splash_screen">50sp</dimen>
+</resources>

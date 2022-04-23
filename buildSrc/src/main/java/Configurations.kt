@@ -52,6 +52,7 @@ object LibVersion {
     const val OKHTTP3_LOGGING_VERSION = "4.9.1"
     const val RXJAVA2_ADAPTER_VERSION = "1.0.0"
     const val COROUTINES_ADAPTER = "0.9.2"
+    const val FLOW_ADAPTER_VERSION = "1.0.0"
 
     // Koin
     const val KOIN_VERSION = "3.1.2"
@@ -128,6 +129,7 @@ object Retrofit2 {
         "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${LibVersion.RXJAVA2_ADAPTER_VERSION}"
     const val COROUTINES_ADAPTER =
         "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:${LibVersion.COROUTINES_ADAPTER}"
+    const val FLOW_ADAPTER = "tech.thdev:flow-call-adapter-factory:${LibVersion.FLOW_ADAPTER_VERSION}"
 }
 
 object Glide {

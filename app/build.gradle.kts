@@ -19,12 +19,15 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes.onEach{
-        val properties = Properties()
-        properties.load(project.rootProject.file("apikey.properties").inputStream())
-        val apiKey = properties.getProperty("movie_database_apikey", "")
-        it.buildConfigField("String", "MOVIE_DB_APIKEY", apiKey)
+    buildTypes{
+        getByName("debug"){
+            val url = "\"https://api.nytimes.com/svc/movies/v2/\""
+            val apiKey = "\"kAhGvXfD8nHJ05vHWAOPwJtBzLHp5qJR\""
+            buildConfigField("String", "MOVIE_DB_APIKEY", apiKey)
+            buildConfigField("String", "BASE_API_URL", url)
+        }
     }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -67,6 +70,7 @@ dependencies{
     implementation(Retrofit2.CONVERTER_JSON)
     implementation(Retrofit2.COROUTINES_ADAPTER)
     implementation(Retrofit2.LOGGING_INTERCEPTOR)
+    implementation(Retrofit2.FLOW_ADAPTER)
     /**Google Map**/
     implementation(GoogleMaps.googleMap)
     implementation(GoogleMaps.googleLocation)
@@ -80,6 +84,10 @@ dependencies{
     implementation(Firebase.core)
     implementation(Firebase.messaging)
     implementation(Firebase.analytics)
+    /**Glide**/
+    implementation(Glide.GLIDE)
+    implementation(Glide.COMPILER)
+    implementation(Glide.GLIDE_OKHTTP3)
     /**Tests**/
     testImplementation(Tests.JUNIT)
     androidTestImplementation(Tests.TEST_EXT_JUNIT)
