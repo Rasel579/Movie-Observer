@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_nav_header"
+    android:background="@drawable/movie_back_ground_drawer_layout"
+    style="@style/ThemeOverlay.AppCompat.Dark"
+    android:gravity="center"
+    >
+    <TextView
+        android:id="@+id/nav_header_profile_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_title_drawer_layout"
+        android:textSize="@dimen/text_size_title_drawer_layout"
+        android:textStyle="bold"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="30"
+        android:shadowColor="@color/black"
+        android:textColor="@color/white"
+        android:text="@string/title_drawer_layout"
+        />
+    <TextView
+        android:id="@+id/nav_header_bio_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_subtitle_drawer_layout"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:shadowColor="@color/black"
+        android:shadowDx="-10"
+        android:shadowDy="-10"
+        android:shadowRadius="30"
+        android:text="@string/sub_title_drawer_layout"
+        android:textSize="@dimen/text_size_subtitle_drawer_layout"
+        />
+</LinearLayout>

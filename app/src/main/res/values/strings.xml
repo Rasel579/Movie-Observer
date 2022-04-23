@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Movie Observer</string>
+    <string name="background_image_view_drawer_layout">Background</string>
+    <string name="sub_title_drawer_layout">Find Your Movie</string>
+    <string name="title_drawer_layout">The Movie Observer</string>
+    <string name="item_menu_main_screen">Main Screen</string>
+    <string name="open_drawer_layout_description">Open Drawer Layout</string>
+    <string name="close_drawer_layout_description">Close Drawer Layout</string>
 </resources>
