@@ -12,6 +12,7 @@ class MovieAdapter(
     private val getData: (Int) -> Any
 ) : RecyclerView.Adapter<MovieAdapter.MovieItem>() {
     private var page = 1
+    private val preLoaderPage = 15
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieItem =
         MovieItem(
@@ -24,7 +25,7 @@ class MovieAdapter(
 
     override fun onBindViewHolder(holder: MovieItem, position: Int) {
         holder.bind(movies[position])
-        if (position == movies.size - 15){
+        if (position == movies.size - preLoaderPage){
                ++page
                getData.invoke(page)
         }
