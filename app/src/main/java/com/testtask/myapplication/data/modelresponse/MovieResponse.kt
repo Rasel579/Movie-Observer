@@ -10,7 +10,7 @@ data class MovieResponse(
     @SerializedName("date_updated")
     val dateUpdated: String,
     @SerializedName("display_title")
-    val display_title: String,
+    val displayTitle: String,
     @SerializedName("headline")
     val headLine: String,
     @SerializedName("link")

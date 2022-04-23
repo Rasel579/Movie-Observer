@@ -21,10 +21,13 @@ android {
 
     buildTypes.onEach{
         val properties = Properties()
-        properties.load(project.rootProject.file("apikey.properties").inputStream())
+        val url = "\"https://api.nytimes.com/svc/movies/v2/\""
+        properties.load(file("..//apikey.properties").inputStream())
         val apiKey = properties.getProperty("movie_database_apikey", "")
         it.buildConfigField("String", "MOVIE_DB_APIKEY", apiKey)
+        it.buildConfigField("String", "BASE_API_URL", url)
     }
+
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -67,6 +70,7 @@ dependencies{
     implementation(Retrofit2.CONVERTER_JSON)
     implementation(Retrofit2.COROUTINES_ADAPTER)
     implementation(Retrofit2.LOGGING_INTERCEPTOR)
+    implementation(Retrofit2.FLOW_ADAPTER)
     /**Google Map**/
     implementation(GoogleMaps.googleMap)
     implementation(GoogleMaps.googleLocation)

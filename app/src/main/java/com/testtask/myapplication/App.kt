@@ -12,7 +12,11 @@ class App: Application() {
             androidContext(applicationContext)
             modules (
                 listOf(
-                    Di.sourceModule()
+                    Di.retrofitModule(),
+                    Di.sourceModule(),
+                    Di.mappersModule(),
+                    Di.repositoryModules(),
+                    Di.viewModelsModules()
                 )
             )
         }
