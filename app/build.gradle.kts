@@ -21,10 +21,8 @@ android {
 
     buildTypes{
         getByName("debug"){
-            val properties = Properties()
             val url = "\"https://api.nytimes.com/svc/movies/v2/\""
-            properties.load(file("..//apikey.properties").inputStream())
-            val apiKey = properties.getProperty("movie_database_apikey", "")
+            val apiKey = "\"kAhGvXfD8nHJ05vHWAOPwJtBzLHp5qJR\""
             buildConfigField("String", "MOVIE_DB_APIKEY", apiKey)
             buildConfigField("String", "BASE_API_URL", url)
         }
