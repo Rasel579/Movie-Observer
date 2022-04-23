@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_subtitle_drawer_layout">10dp</dimen>
+    <dimen name="text_size_subtitle_drawer_layout">30sp</dimen>
+    <dimen name="margin_title_drawer_layout">10dp</dimen>
+    <dimen name="text_size_title_drawer_layout">36sp</dimen>
+    <dimen name="height_nav_header">320dp</dimen>
+</resources>
